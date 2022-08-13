@@ -1,11 +1,11 @@
 //dependencies
-const { Schema, model } = require("mongoose");
+const { Schema, Types } = require("mongoose");
 
 //using the moment package for date
 const moment = require("moment");
 
 //Schema data with MongoDB and Mongoose
-const ReactionSchema = new Schmea(
+const ReactionSchema = new Schema(
   {
     //mongoose's ObjectId data types
     reactionId: {
@@ -26,7 +26,7 @@ const ReactionSchema = new Schmea(
     },
     createdAt: {
       //sets the type to be a date
-      type: date,
+      type: Date,
       //sets to current timestamp
       default: Date.now,
       //using getter method to format the timestamp on query

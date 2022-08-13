@@ -20,7 +20,7 @@ const thoughtSchema = new Schema(
     },
     createdAt: {
       //sets the type to be a date
-      type: date,
+      type: Date,
       //sets to current timestamp
       default: Date.now,
       //using getter method to format the timestamp on query
