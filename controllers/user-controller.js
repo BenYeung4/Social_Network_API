@@ -80,6 +80,7 @@ const userController = {
       .catch((err) => res.status(400).json(err));
   },
 
+  //add friend to friend's list
   addFriend({ params }, res) {
     User.findOneAndUpdate(
       { _id: params.id },
@@ -96,6 +97,7 @@ const userController = {
       .catch((err) => res.json(err));
   },
 
+  //delete friend from friends list
   deleteFriend({ params }, res) {
     User.findOneAndUpdate(
       { _id: params.id },
