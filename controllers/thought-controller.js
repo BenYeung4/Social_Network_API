@@ -18,10 +18,6 @@ const thoughtController = {
   //get one thought by id
   getThoughtById({ params }, res) {
     Thought.findOne({ _id: params.id })
-      .populate({
-        path: "reactions",
-        select: "-__v",
-      })
       .select("-__v")
       .then((dbThoughtData) => {
         if (!dbThoughtData) {
@@ -138,21 +134,3 @@ const thoughtController = {
 };
 
 module.exports = thoughtController;
-
-// createThought({ params, body }, res) {
-//     Thought.create({
-//       thoughtText: body.thoughtText,
-//       username: body.username,
-//     }).then((dbThoughtData) => {
-//       //adding the thought
-//       User.findOneAndUpdate(
-//         { _id: body.userId },
-//         { $push: { thoughts: dbThoughtData._id } }
-//       )
-//         .then(res.json(dbThoughtData))
-//         .catch((err) => {
-//           console.log(err);
-//           res.status(400).json(err);
-//         });
-//     });
-//   },

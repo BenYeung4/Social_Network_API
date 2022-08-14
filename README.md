@@ -6,6 +6,12 @@ AS A social media startup
 I WANT an API for my social network that uses a NoSQL database
 SO THAT my website can handle large amounts of unstructured data
 
+## Video Links
+
+[Routes & Server Walkthrough](https://drive.google.com/file/d/1UD5Cz0HkhNuL9t0KQ9umrojU4YhVwy9O/view)<br>
+[Thought & Reaction Walkthrough](https://drive.google.com/file/d/1AHTQqAc-vVgN8D8gj83IKQpbDLtvX_4s/view)<br>
+[Friend Walkthrough](https://drive.google.com/file/d/1TNllM3638GeAoR8l61Q6bm7IdpGPyflz/view)<br>
+
 ## Focus
 
 GIVEN a social network API
