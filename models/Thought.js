@@ -31,7 +31,6 @@ const thoughtSchema = new Schema(
       //entry type
       type: String,
       required: "Please enter a username",
-      trim: true,
     },
     reactions:
       //Array of nested documents created with the reactionSchema, since we made the reactionSchema a seperate model, we will push it with the []
@@ -51,7 +50,7 @@ const thoughtSchema = new Schema(
 
 //getters's true function, retriving the length of friends. Wish I have as many friends
 thoughtSchema.virtual("reactionCount").get(function () {
-  return this.reaction.length;
+  return this.reactions.length;
 });
 
 const Thought = model("Thought", thoughtSchema);

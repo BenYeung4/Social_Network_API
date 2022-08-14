@@ -11,15 +11,18 @@ const userController = {
         //select is the document number that will increase based on how many time it has been updated
         select: "-__v",
       })
+      //populate friends
+      .populate({
+        path: "friends",
+        select: "-__v",
+      })
       .select("-__v")
-      .sort(
-        { _id: -1 }.then(
-          ((dbUsers) => res.json(dbUsers)).catch((err) => {
-            console.log(err);
-            res.status(400).json(err);
-          })
-        )
-      );
+      .sort({ _id: -1 })
+      .then((dbUserData) => res.json(dbUserData))
+      .catch((err) => {
+        console.log(err);
+        res.status(400).json(err);
+      });
   },
 
   //get one user bty id, same as sequelize .findOne() but using mongoose instead

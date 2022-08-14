@@ -5,7 +5,7 @@ const { Schema, Types } = require("mongoose");
 const moment = require("moment");
 
 //Schema data with MongoDB and Mongoose
-const ReactionSchema = new Schema(
+const reactionSchema = new Schema(
   {
     //mongoose's ObjectId data types
     reactionId: {
@@ -46,4 +46,4 @@ const ReactionSchema = new Schema(
 );
 
 //export the Reaction model
-module.exports = ReactionSchema;
+module.exports = reactionSchema;
